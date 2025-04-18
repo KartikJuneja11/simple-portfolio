@@ -1,10 +1,34 @@
 function App() {
+
+  const navLinks = [
+    {name: 'Home', href: '#home'},
+    {name: 'About', href: '#about'},
+    {name: 'Skills', href: '#skills'},
+    {name: 'Projects', href: '#projects'},
+    {name: 'Contact', href: '#contact'}
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* navigation */}
       <header className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-xl font-bold">My Portfolio</h1>
+
+          <nav>
+            <ul className="flex space-x-4">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                  href={link.href} 
+                  className="px-2 py-1 rounded hover:bg-gray-200 transition"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </header>
 
