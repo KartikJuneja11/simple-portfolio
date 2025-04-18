@@ -1,7 +1,12 @@
 function App(){
   return(
-    <div className="App">
-      <h1 className="text-3x1 font-bold text-center mt-8">My Portfolio</h1>
+    <div className="min-h-screen bg-gray-50">
+      {/* navigation */}
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4">
+          <h1 className="text-xl font-bold">My Portfolio</h1>
+        </div>
+      </header>
     </div>
   );
 }
